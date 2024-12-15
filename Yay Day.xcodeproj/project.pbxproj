@@ -1,0 +1,797 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA0437E22CA4099800C239FD /* SettingsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0437E12CA4099800C239FD /* SettingsPage.swift */; };
+		AA0437E42CA409F400C239FD /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0437E32CA409F400C239FD /* SettingsViewModel.swift */; };
+		AA0437E82CA53B4900C239FD /* SeeMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0437E72CA53B4900C239FD /* SeeMoreView.swift */; };
+		AA0437EA2CA53BA700C239FD /* SeeMoreDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0437E92CA53BA700C239FD /* SeeMoreDesign.swift */; };
+		AA0437EC2CA560F400C239FD /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0437EB2CA560F400C239FD /* FilterView.swift */; };
+		AA0437EE2CA561C500C239FD /* CategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0437ED2CA561C500C239FD /* CategoryButton.swift */; };
+		AA0437F02CA5ABCD00C239FD /* FilteredEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0437EF2CA5ABCD00C239FD /* FilteredEventView.swift */; };
+		AA0437F22CA5B96900C239FD /* EventRowViewFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0437F12CA5B96900C239FD /* EventRowViewFilter.swift */; };
+		AA0437F62CA5C91900C239FD /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0437F52CA5C91900C239FD /* DateFormatter.swift */; };
+		AA239BA82C90392800D92198 /* Yay_DayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA239BA72C90392800D92198 /* Yay_DayApp.swift */; };
+		AA239BAA2C90392800D92198 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA239BA92C90392800D92198 /* ContentView.swift */; };
+		AA239BAC2C90392900D92198 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA239BAB2C90392900D92198 /* Assets.xcassets */; };
+		AA239BAF2C90392900D92198 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA239BAE2C90392900D92198 /* Preview Assets.xcassets */; };
+		AA239BB92C90392900D92198 /* Yay_DayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA239BB82C90392900D92198 /* Yay_DayTests.swift */; };
+		AA239BC32C90392900D92198 /* Yay_DayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA239BC22C90392900D92198 /* Yay_DayUITests.swift */; };
+		AA239BC52C90392900D92198 /* Yay_DayUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA239BC42C90392900D92198 /* Yay_DayUITestsLaunchTests.swift */; };
+		AA239BD22C905D1800D92198 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA239BD12C905D1800D92198 /* TabBarView.swift */; };
+		AA239BD42C906C6900D92198 /* EventinfoPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA239BD32C906C6900D92198 /* EventinfoPage.swift */; };
+		AA239BD82C906EB800D92198 /* EventViewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA239BD72C906EB800D92198 /* EventViewmodel.swift */; };
+		AA2ECD392C9C17CF005459E4 /* HorizontalEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2ECD382C9C17CF005459E4 /* HorizontalEventView.swift */; };
+		AA342DF82CCB9C9700D02BCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA342DF72CCB9C9700D02BCA /* AppDelegate.swift */; };
+		AA5BB95B2CAE912700815579 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5BB95A2CAE912700815579 /* ViewController.swift */; };
+		AA5BB95D2CAE955200815579 /* LocationManagerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5BB95C2CAE955200815579 /* LocationManagerWrapper.swift */; };
+		AA5BB95F2CB5548900815579 /* EventsNearYouComp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5BB95E2CB5548900815579 /* EventsNearYouComp.swift */; };
+		AA5BB9612CB56B2700815579 /* EventsNearYouView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5BB9602CB56B2700815579 /* EventsNearYouView.swift */; };
+		AA5BB9632CBD2A4900815579 /* EventViewModelDays.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5BB9622CBD2A4900815579 /* EventViewModelDays.swift */; };
+		AA5BB9652CBD2BB600815579 /* SeeMoreViewDays.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5BB9642CBD2BB600815579 /* SeeMoreViewDays.swift */; };
+		AA5BB9672CBD6EB700815579 /* EventViewModelCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5BB9662CBD6EB700815579 /* EventViewModelCat.swift */; };
+		AA5BB9692CBD710E00815579 /* SeeMoreViewCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5BB9682CBD710E00815579 /* SeeMoreViewCat.swift */; };
+		AA6AEB8D2CF862520081DA91 /* HorizontalEventViewTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6AEB8C2CF862520081DA91 /* HorizontalEventViewTop.swift */; };
+		AA7342FD2C94492B005F2E84 /* FavouritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7342FC2C94492A005F2E84 /* FavouritesView.swift */; };
+		AA7E64752D0079E400B679A8 /* FireworksAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7E64742D0079E400B679A8 /* FireworksAnimation.swift */; };
+		AA830F302CE6014E00EED280 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA830F2F2CE6014E00EED280 /* SearchViewModel.swift */; };
+		AA830F342CE601B100EED280 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA830F332CE601B100EED280 /* SearchView.swift */; };
+		AA830F362CEB725E00EED280 /* EventViewModelFree.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA830F352CEB725E00EED280 /* EventViewModelFree.swift */; };
+		AA830F382CEB741D00EED280 /* SeeMoreViewFree.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA830F372CEB741D00EED280 /* SeeMoreViewFree.swift */; };
+		AA960B842CDCCA6A005C6449 /* CategoryViewFP.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA960B832CDCCA6A005C6449 /* CategoryViewFP.swift */; };
+		AA960B862CDCCAA3005C6449 /* CategoryEventCardFP.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA960B852CDCCAA3005C6449 /* CategoryEventCardFP.swift */; };
+		AA960B912CDCD8F5005C6449 /* CategoryViewModelFP6.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA960B902CDCD8F5005C6449 /* CategoryViewModelFP6.swift */; };
+		AA960B932CDE26B6005C6449 /* ViewModelCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA960B922CDE26B6005C6449 /* ViewModelCity.swift */; };
+		AA960B952CDE26F0005C6449 /* CityPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA960B942CDE26F0005C6449 /* CityPickerView.swift */; };
+		AA960B972CE0EC61005C6449 /* EventCardView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA960B962CE0EC61005C6449 /* EventCardView2.swift */; };
+		AA9804CD2CBE8B9F0071E046 /* EventViewModelKom.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9804CC2CBE8B9F0071E046 /* EventViewModelKom.swift */; };
+		AA9804CF2CBE8C0C0071E046 /* SeeMoreViewKom.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9804CE2CBE8C0C0071E046 /* SeeMoreViewKom.swift */; };
+		AA9804D12CBE8D5B0071E046 /* EventViewModelWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9804D02CBE8D5B0071E046 /* EventViewModelWeek.swift */; };
+		AA9804D32CBE8DFD0071E046 /* SeeMoreViewWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9804D22CBE8DFD0071E046 /* SeeMoreViewWeek.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AA239BB52C90392900D92198 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA239B9C2C90392800D92198 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA239BA32C90392800D92198;
+			remoteInfo = "Yay Day";
+		};
+		AA239BBF2C90392900D92198 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA239B9C2C90392800D92198 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA239BA32C90392800D92198;
+			remoteInfo = "Yay Day";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AA0437E12CA4099800C239FD /* SettingsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPage.swift; sourceTree = "<group>"; };
+		AA0437E32CA409F400C239FD /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		AA0437E72CA53B4900C239FD /* SeeMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeMoreView.swift; sourceTree = "<group>"; };
+		AA0437E92CA53BA700C239FD /* SeeMoreDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeMoreDesign.swift; sourceTree = "<group>"; };
+		AA0437EB2CA560F400C239FD /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		AA0437ED2CA561C500C239FD /* CategoryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryButton.swift; sourceTree = "<group>"; };
+		AA0437EF2CA5ABCD00C239FD /* FilteredEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredEventView.swift; sourceTree = "<group>"; };
+		AA0437F12CA5B96900C239FD /* EventRowViewFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRowViewFilter.swift; sourceTree = "<group>"; };
+		AA0437F52CA5C91900C239FD /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		AA239BA42C90392800D92198 /* Yay Day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yay Day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA239BA72C90392800D92198 /* Yay_DayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yay_DayApp.swift; sourceTree = "<group>"; };
+		AA239BA92C90392800D92198 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AA239BAB2C90392900D92198 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AA239BAE2C90392900D92198 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AA239BB42C90392900D92198 /* Yay DayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Yay DayTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA239BB82C90392900D92198 /* Yay_DayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yay_DayTests.swift; sourceTree = "<group>"; };
+		AA239BBE2C90392900D92198 /* Yay DayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Yay DayUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA239BC22C90392900D92198 /* Yay_DayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yay_DayUITests.swift; sourceTree = "<group>"; };
+		AA239BC42C90392900D92198 /* Yay_DayUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yay_DayUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AA239BD12C905D1800D92198 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		AA239BD32C906C6900D92198 /* EventinfoPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventinfoPage.swift; sourceTree = "<group>"; };
+		AA239BD72C906EB800D92198 /* EventViewmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewmodel.swift; sourceTree = "<group>"; };
+		AA2ECD382C9C17CF005459E4 /* HorizontalEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalEventView.swift; sourceTree = "<group>"; };
+		AA342DF72CCB9C9700D02BCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AA5BB9592CAE902900815579 /* Yay-Day-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Yay-Day-Info.plist"; sourceTree = SOURCE_ROOT; };
+		AA5BB95A2CAE912700815579 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AA5BB95C2CAE955200815579 /* LocationManagerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerWrapper.swift; sourceTree = "<group>"; };
+		AA5BB95E2CB5548900815579 /* EventsNearYouComp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsNearYouComp.swift; sourceTree = "<group>"; };
+		AA5BB9602CB56B2700815579 /* EventsNearYouView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsNearYouView.swift; sourceTree = "<group>"; };
+		AA5BB9622CBD2A4900815579 /* EventViewModelDays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModelDays.swift; sourceTree = "<group>"; };
+		AA5BB9642CBD2BB600815579 /* SeeMoreViewDays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeMoreViewDays.swift; sourceTree = "<group>"; };
+		AA5BB9662CBD6EB700815579 /* EventViewModelCat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModelCat.swift; sourceTree = "<group>"; };
+		AA5BB9682CBD710E00815579 /* SeeMoreViewCat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeMoreViewCat.swift; sourceTree = "<group>"; };
+		AA6AEB8C2CF862520081DA91 /* HorizontalEventViewTop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalEventViewTop.swift; sourceTree = "<group>"; };
+		AA7342FC2C94492A005F2E84 /* FavouritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesView.swift; sourceTree = "<group>"; };
+		AA7E64742D0079E400B679A8 /* FireworksAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireworksAnimation.swift; sourceTree = "<group>"; };
+		AA830F2F2CE6014E00EED280 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		AA830F332CE601B100EED280 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		AA830F352CEB725E00EED280 /* EventViewModelFree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModelFree.swift; sourceTree = "<group>"; };
+		AA830F372CEB741D00EED280 /* SeeMoreViewFree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeMoreViewFree.swift; sourceTree = "<group>"; };
+		AA960B832CDCCA6A005C6449 /* CategoryViewFP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewFP.swift; sourceTree = "<group>"; };
+		AA960B852CDCCAA3005C6449 /* CategoryEventCardFP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryEventCardFP.swift; sourceTree = "<group>"; };
+		AA960B902CDCD8F5005C6449 /* CategoryViewModelFP6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModelFP6.swift; sourceTree = "<group>"; };
+		AA960B922CDE26B6005C6449 /* ViewModelCity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelCity.swift; sourceTree = "<group>"; };
+		AA960B942CDE26F0005C6449 /* CityPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityPickerView.swift; sourceTree = "<group>"; };
+		AA960B962CE0EC61005C6449 /* EventCardView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCardView2.swift; sourceTree = "<group>"; };
+		AA9804CC2CBE8B9F0071E046 /* EventViewModelKom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModelKom.swift; sourceTree = "<group>"; };
+		AA9804CE2CBE8C0C0071E046 /* SeeMoreViewKom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeMoreViewKom.swift; sourceTree = "<group>"; };
+		AA9804D02CBE8D5B0071E046 /* EventViewModelWeek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModelWeek.swift; sourceTree = "<group>"; };
+		AA9804D22CBE8DFD0071E046 /* SeeMoreViewWeek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeMoreViewWeek.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AA239BA12C90392800D92198 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA239BB12C90392900D92198 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA239BBB2C90392900D92198 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AA239B9B2C90392800D92198 = {
+			isa = PBXGroup;
+			children = (
+				AA239BA62C90392800D92198 /* Yay Day */,
+				AA239BB72C90392900D92198 /* Yay DayTests */,
+				AA239BC12C90392900D92198 /* Yay DayUITests */,
+				AA239BA52C90392800D92198 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AA239BA52C90392800D92198 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA239BA42C90392800D92198 /* Yay Day.app */,
+				AA239BB42C90392900D92198 /* Yay DayTests.xctest */,
+				AA239BBE2C90392900D92198 /* Yay DayUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AA239BA62C90392800D92198 /* Yay Day */ = {
+			isa = PBXGroup;
+			children = (
+				AA239BA72C90392800D92198 /* Yay_DayApp.swift */,
+				AA5BB9592CAE902900815579 /* Yay-Day-Info.plist */,
+				AA960B982CE0F0E7005C6449 /* TabBarComponents */,
+				AA960B992CE0F191005C6449 /* FPcomponents */,
+				AA239BAB2C90392900D92198 /* Assets.xcassets */,
+				AA239BAD2C90392900D92198 /* Preview Content */,
+				AA960B9A2CE0F274005C6449 /* CategoryViewFP */,
+				AA960B9C2CE0F31F005C6449 /* LocationMapUrlDate */,
+			);
+			path = "Yay Day";
+			sourceTree = "<group>";
+		};
+		AA239BAD2C90392900D92198 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				AA239BAE2C90392900D92198 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AA239BB72C90392900D92198 /* Yay DayTests */ = {
+			isa = PBXGroup;
+			children = (
+				AA239BB82C90392900D92198 /* Yay_DayTests.swift */,
+			);
+			path = "Yay DayTests";
+			sourceTree = "<group>";
+		};
+		AA239BC12C90392900D92198 /* Yay DayUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AA239BC22C90392900D92198 /* Yay_DayUITests.swift */,
+				AA239BC42C90392900D92198 /* Yay_DayUITestsLaunchTests.swift */,
+			);
+			path = "Yay DayUITests";
+			sourceTree = "<group>";
+		};
+		AA960B982CE0F0E7005C6449 /* TabBarComponents */ = {
+			isa = PBXGroup;
+			children = (
+				AA239BA92C90392800D92198 /* ContentView.swift */,
+				AA239BD12C905D1800D92198 /* TabBarView.swift */,
+				AA0437EB2CA560F400C239FD /* FilterView.swift */,
+				AA0437EF2CA5ABCD00C239FD /* FilteredEventView.swift */,
+				AA0437F12CA5B96900C239FD /* EventRowViewFilter.swift */,
+				AA0437E12CA4099800C239FD /* SettingsPage.swift */,
+				AA0437E32CA409F400C239FD /* SettingsViewModel.swift */,
+				AA7342FC2C94492A005F2E84 /* FavouritesView.swift */,
+				AA239BD72C906EB800D92198 /* EventViewmodel.swift */,
+			);
+			path = TabBarComponents;
+			sourceTree = "<group>";
+		};
+		AA960B992CE0F191005C6449 /* FPcomponents */ = {
+			isa = PBXGroup;
+			children = (
+				AA239BD32C906C6900D92198 /* EventinfoPage.swift */,
+				AA5BB9602CB56B2700815579 /* EventsNearYouView.swift */,
+				AA5BB95E2CB5548900815579 /* EventsNearYouComp.swift */,
+				AA2ECD382C9C17CF005459E4 /* HorizontalEventView.swift */,
+				AA6AEB8C2CF862520081DA91 /* HorizontalEventViewTop.swift */,
+				AA5BB9622CBD2A4900815579 /* EventViewModelDays.swift */,
+				AA9804D02CBE8D5B0071E046 /* EventViewModelWeek.swift */,
+				AA5BB9662CBD6EB700815579 /* EventViewModelCat.swift */,
+				AA9804CC2CBE8B9F0071E046 /* EventViewModelKom.swift */,
+				AA830F352CEB725E00EED280 /* EventViewModelFree.swift */,
+				AA0437E72CA53B4900C239FD /* SeeMoreView.swift */,
+				AA5BB9642CBD2BB600815579 /* SeeMoreViewDays.swift */,
+				AA5BB9682CBD710E00815579 /* SeeMoreViewCat.swift */,
+				AA9804CE2CBE8C0C0071E046 /* SeeMoreViewKom.swift */,
+				AA9804D22CBE8DFD0071E046 /* SeeMoreViewWeek.swift */,
+				AA0437E92CA53BA700C239FD /* SeeMoreDesign.swift */,
+				AA960B922CDE26B6005C6449 /* ViewModelCity.swift */,
+				AA960B942CDE26F0005C6449 /* CityPickerView.swift */,
+				AA960B962CE0EC61005C6449 /* EventCardView2.swift */,
+				AA830F2F2CE6014E00EED280 /* SearchViewModel.swift */,
+				AA830F332CE601B100EED280 /* SearchView.swift */,
+				AA830F372CEB741D00EED280 /* SeeMoreViewFree.swift */,
+				AA7E64742D0079E400B679A8 /* FireworksAnimation.swift */,
+			);
+			path = FPcomponents;
+			sourceTree = "<group>";
+		};
+		AA960B9A2CE0F274005C6449 /* CategoryViewFP */ = {
+			isa = PBXGroup;
+			children = (
+				AA960B902CDCD8F5005C6449 /* CategoryViewModelFP6.swift */,
+				AA960B832CDCCA6A005C6449 /* CategoryViewFP.swift */,
+				AA960B852CDCCAA3005C6449 /* CategoryEventCardFP.swift */,
+				AA0437ED2CA561C500C239FD /* CategoryButton.swift */,
+			);
+			path = CategoryViewFP;
+			sourceTree = "<group>";
+		};
+		AA960B9C2CE0F31F005C6449 /* LocationMapUrlDate */ = {
+			isa = PBXGroup;
+			children = (
+				AA342DF72CCB9C9700D02BCA /* AppDelegate.swift */,
+				AA5BB95C2CAE955200815579 /* LocationManagerWrapper.swift */,
+				AA5BB95A2CAE912700815579 /* ViewController.swift */,
+				AA0437F52CA5C91900C239FD /* DateFormatter.swift */,
+			);
+			path = LocationMapUrlDate;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AA239BA32C90392800D92198 /* Yay Day */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA239BC82C90392900D92198 /* Build configuration list for PBXNativeTarget "Yay Day" */;
+			buildPhases = (
+				AA239BA02C90392800D92198 /* Sources */,
+				AA239BA12C90392800D92198 /* Frameworks */,
+				AA239BA22C90392800D92198 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Yay Day";
+			productName = "Yay Day";
+			productReference = AA239BA42C90392800D92198 /* Yay Day.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AA239BB32C90392900D92198 /* Yay DayTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA239BCB2C90392900D92198 /* Build configuration list for PBXNativeTarget "Yay DayTests" */;
+			buildPhases = (
+				AA239BB02C90392900D92198 /* Sources */,
+				AA239BB12C90392900D92198 /* Frameworks */,
+				AA239BB22C90392900D92198 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AA239BB62C90392900D92198 /* PBXTargetDependency */,
+			);
+			name = "Yay DayTests";
+			productName = "Yay DayTests";
+			productReference = AA239BB42C90392900D92198 /* Yay DayTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AA239BBD2C90392900D92198 /* Yay DayUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA239BCE2C90392900D92198 /* Build configuration list for PBXNativeTarget "Yay DayUITests" */;
+			buildPhases = (
+				AA239BBA2C90392900D92198 /* Sources */,
+				AA239BBB2C90392900D92198 /* Frameworks */,
+				AA239BBC2C90392900D92198 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AA239BC02C90392900D92198 /* PBXTargetDependency */,
+			);
+			name = "Yay DayUITests";
+			productName = "Yay DayUITests";
+			productReference = AA239BBE2C90392900D92198 /* Yay DayUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA239B9C2C90392800D92198 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					AA239BA32C90392800D92198 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					AA239BB32C90392900D92198 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = AA239BA32C90392800D92198;
+					};
+					AA239BBD2C90392900D92198 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = AA239BA32C90392800D92198;
+					};
+				};
+			};
+			buildConfigurationList = AA239B9F2C90392800D92198 /* Build configuration list for PBXProject "Yay Day" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AA239B9B2C90392800D92198;
+			productRefGroup = AA239BA52C90392800D92198 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA239BA32C90392800D92198 /* Yay Day */,
+				AA239BB32C90392900D92198 /* Yay DayTests */,
+				AA239BBD2C90392900D92198 /* Yay DayUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AA239BA22C90392800D92198 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA239BAF2C90392900D92198 /* Preview Assets.xcassets in Resources */,
+				AA239BAC2C90392900D92198 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA239BB22C90392900D92198 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA239BBC2C90392900D92198 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AA239BA02C90392800D92198 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA342DF82CCB9C9700D02BCA /* AppDelegate.swift in Sources */,
+				AA0437F22CA5B96900C239FD /* EventRowViewFilter.swift in Sources */,
+				AA960B912CDCD8F5005C6449 /* CategoryViewModelFP6.swift in Sources */,
+				AA239BAA2C90392800D92198 /* ContentView.swift in Sources */,
+				AA830F302CE6014E00EED280 /* SearchViewModel.swift in Sources */,
+				AA960B952CDE26F0005C6449 /* CityPickerView.swift in Sources */,
+				AA5BB9632CBD2A4900815579 /* EventViewModelDays.swift in Sources */,
+				AA5BB95F2CB5548900815579 /* EventsNearYouComp.swift in Sources */,
+				AA830F382CEB741D00EED280 /* SeeMoreViewFree.swift in Sources */,
+				AA0437EA2CA53BA700C239FD /* SeeMoreDesign.swift in Sources */,
+				AA960B842CDCCA6A005C6449 /* CategoryViewFP.swift in Sources */,
+				AA5BB9652CBD2BB600815579 /* SeeMoreViewDays.swift in Sources */,
+				AA5BB95D2CAE955200815579 /* LocationManagerWrapper.swift in Sources */,
+				AA9804CF2CBE8C0C0071E046 /* SeeMoreViewKom.swift in Sources */,
+				AA239BD42C906C6900D92198 /* EventinfoPage.swift in Sources */,
+				AA0437F62CA5C91900C239FD /* DateFormatter.swift in Sources */,
+				AA960B972CE0EC61005C6449 /* EventCardView2.swift in Sources */,
+				AA0437E22CA4099800C239FD /* SettingsPage.swift in Sources */,
+				AA0437E82CA53B4900C239FD /* SeeMoreView.swift in Sources */,
+				AA830F362CEB725E00EED280 /* EventViewModelFree.swift in Sources */,
+				AA239BD22C905D1800D92198 /* TabBarView.swift in Sources */,
+				AA960B932CDE26B6005C6449 /* ViewModelCity.swift in Sources */,
+				AA7E64752D0079E400B679A8 /* FireworksAnimation.swift in Sources */,
+				AA6AEB8D2CF862520081DA91 /* HorizontalEventViewTop.swift in Sources */,
+				AA2ECD392C9C17CF005459E4 /* HorizontalEventView.swift in Sources */,
+				AA5BB9672CBD6EB700815579 /* EventViewModelCat.swift in Sources */,
+				AA0437EE2CA561C500C239FD /* CategoryButton.swift in Sources */,
+				AA0437E42CA409F400C239FD /* SettingsViewModel.swift in Sources */,
+				AA5BB9612CB56B2700815579 /* EventsNearYouView.swift in Sources */,
+				AA0437F02CA5ABCD00C239FD /* FilteredEventView.swift in Sources */,
+				AA239BA82C90392800D92198 /* Yay_DayApp.swift in Sources */,
+				AA7342FD2C94492B005F2E84 /* FavouritesView.swift in Sources */,
+				AA5BB9692CBD710E00815579 /* SeeMoreViewCat.swift in Sources */,
+				AA5BB95B2CAE912700815579 /* ViewController.swift in Sources */,
+				AA0437EC2CA560F400C239FD /* FilterView.swift in Sources */,
+				AA239BD82C906EB800D92198 /* EventViewmodel.swift in Sources */,
+				AA830F342CE601B100EED280 /* SearchView.swift in Sources */,
+				AA960B862CDCCAA3005C6449 /* CategoryEventCardFP.swift in Sources */,
+				AA9804CD2CBE8B9F0071E046 /* EventViewModelKom.swift in Sources */,
+				AA9804D32CBE8DFD0071E046 /* SeeMoreViewWeek.swift in Sources */,
+				AA9804D12CBE8D5B0071E046 /* EventViewModelWeek.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA239BB02C90392900D92198 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA239BB92C90392900D92198 /* Yay_DayTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA239BBA2C90392900D92198 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA239BC32C90392900D92198 /* Yay_DayUITests.swift in Sources */,
+				AA239BC52C90392900D92198 /* Yay_DayUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AA239BB62C90392900D92198 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA239BA32C90392800D92198 /* Yay Day */;
+			targetProxy = AA239BB52C90392900D92198 /* PBXContainerItemProxy */;
+		};
+		AA239BC02C90392900D92198 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA239BA32C90392800D92198 /* Yay Day */;
+			targetProxy = AA239BBF2C90392900D92198 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		AA239BC62C90392900D92198 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AA239BC72C90392900D92198 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AA239BC92C90392900D92198 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Yay Day/Preview Content\"";
+				DEVELOPMENT_TEAM = 7X4MUS5Z5D;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Yay-Day-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Yay Day";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We only use location data to find events near you, nothing else.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We only use location data to find events near you, nothing else.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Yay-Day.Yay-Day";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AA239BCA2C90392900D92198 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Yay Day/Preview Content\"";
+				DEVELOPMENT_TEAM = 7X4MUS5Z5D;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Yay-Day-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Yay Day";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We only use location data to find events near you, nothing else.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We only use location data to find events near you, nothing else.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Yay-Day.Yay-Day";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AA239BCC2C90392900D92198 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7X4MUS5Z5D;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Yay-Day.Yay-DayTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Yay Day.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Yay Day";
+			};
+			name = Debug;
+		};
+		AA239BCD2C90392900D92198 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7X4MUS5Z5D;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Yay-Day.Yay-DayTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Yay Day.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Yay Day";
+			};
+			name = Release;
+		};
+		AA239BCF2C90392900D92198 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7X4MUS5Z5D;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Yay-Day.Yay-DayUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Yay Day";
+			};
+			name = Debug;
+		};
+		AA239BD02C90392900D92198 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7X4MUS5Z5D;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Yay-Day.Yay-DayUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Yay Day";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AA239B9F2C90392800D92198 /* Build configuration list for PBXProject "Yay Day" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA239BC62C90392900D92198 /* Debug */,
+				AA239BC72C90392900D92198 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA239BC82C90392900D92198 /* Build configuration list for PBXNativeTarget "Yay Day" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA239BC92C90392900D92198 /* Debug */,
+				AA239BCA2C90392900D92198 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA239BCB2C90392900D92198 /* Build configuration list for PBXNativeTarget "Yay DayTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA239BCC2C90392900D92198 /* Debug */,
+				AA239BCD2C90392900D92198 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA239BCE2C90392900D92198 /* Build configuration list for PBXNativeTarget "Yay DayUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA239BCF2C90392900D92198 /* Debug */,
+				AA239BD02C90392900D92198 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AA239B9C2C90392800D92198 /* Project object */;
+}
