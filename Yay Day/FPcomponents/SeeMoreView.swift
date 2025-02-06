@@ -34,7 +34,7 @@ struct AllEventsView: View {
             }
             .onAppear {
                 Task {
-                    await viewModel.fetchEvents(from: "https://api.yayx.dk/api/eventFilter")
+                    await viewModel.fetchEvents(from: "https://api.yayx.dk/event/eventFilterMain")
                 }
             }
         }

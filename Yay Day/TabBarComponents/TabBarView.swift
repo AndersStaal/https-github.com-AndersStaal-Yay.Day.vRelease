@@ -22,7 +22,8 @@ struct TabBarView: View {
     @StateObject private var viewModel = EventViewModel()
     @StateObject private var viewModel8 = FreeEventsViewModel()
     @ObservedObject var translationManager = TranslationManager.shared
-    
+    @State private var isModalPresented = false
+
      
     
     
@@ -42,19 +43,26 @@ struct TabBarView: View {
                 .tabItem {
                     Image(systemName: "house.fill")
                     Text(translationManager.translate("Home"))
-                        
+                    
                 }
                 
                 
+                NavigationStack {
+                       RandomEventModalView() // This is now a full page
+                   }
+                   .tabItem {
+                       Image(systemName: "questionmark.circle.fill")
+                       Text("Prøv lykken")
+                   }
                 
                 NavigationStack {
                     FilterView2()
                 }
-               
+                
                 .tabItem {
                     Image(systemName: "slider.horizontal.3")
                     Text(translationManager.translate("Filtrering"))
-                        
+                    
                 }
                 
                 NavigationStack {
@@ -64,7 +72,7 @@ struct TabBarView: View {
                 .tabItem {
                     Image(systemName: "wrench.and.screwdriver")
                     Text(translationManager.translate("Settings"))
-                        
+                    
                 }
                 
                 NavigationStack {
@@ -74,29 +82,35 @@ struct TabBarView: View {
                 .tabItem {
                     Image(systemName: "heart.fill")
                     Text(translationManager.translate("Favoritter"))
-                       
-                } 
+                    
+                }
+                
+                
+                
                 
             }
-            
-            
-            Divider()
-                .frame(height: 1)
-                .background(Color.gray.opacity(0.7))
-                .offset(y: -82)
-        }
-        
-        .onAppear {
-            Task {
-                await viewModel.fetchEvents(from: "https://api.yayx.dk/api/event")
+            .ignoresSafeArea(edges: .top)
+            .sheet(isPresented: $isModalPresented) {
+                RandomEventModalView()
+                
             }
-            setupTabBarAppearance()
-            setupNavigationBarAppearance()
-        }
-        .edgesIgnoringSafeArea(.bottom)
-        
-    }
-    
+
+                Divider()
+                    .frame(height: 1)
+                    .background(Color.gray.opacity(0.7))
+                    .offset(y: -82)
+            }
+            
+            
+            .onAppear {
+                Task {
+                    await viewModel.fetchEvents(from: "https://api.yayx.dk/event/eventFilterMain")
+                }
+                setupTabBarAppearance()
+            }
+            .edgesIgnoringSafeArea(.bottom)
+            
+            }
     
     
     private func setupTabBarAppearance() {
@@ -129,33 +143,6 @@ struct TabBarView: View {
         UITabBar.appearance().scrollEdgeAppearance = appearance
     }
     
-    private func setupNavigationBarAppearance() {
-        let appearance = UINavigationBarAppearance()
-        appearance.configureWithOpaqueBackground()
-        
-        // Set navigation bar background color
-        appearance.backgroundColor = UIColor(
-            red: 0.99,
-            green: 0.97,
-            blue: 0.88,
-            alpha: 0.9
-        )
-        
-        appearance.shadowColor = .clear
-        
-        appearance.titleTextAttributes = [
-            .foregroundColor: UIColor.black,
-            .font: UIFont.systemFont(ofSize: 18, weight: .semibold)
-        ]
-        
-        UINavigationBar.appearance().standardAppearance = appearance
-        UINavigationBar.appearance().scrollEdgeAppearance = appearance
-        
-        UINavigationBar.appearance().tintColor = .orange 
-        UIBarButtonItem.appearance().setTitleTextAttributes(
-            [.foregroundColor: UIColor.clear],
-            for: .normal
-        )
-    }
+    
 
 }

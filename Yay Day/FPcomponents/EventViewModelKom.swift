@@ -23,7 +23,7 @@ class EventViewModelByCategory2: ObservableObject {
     
     func fetchEventsForCategories2() async {
         let categoryIDString = categoryIDs.map { String($0) }.joined(separator: ",")
-        let urlString = "https://api.yayx.dk/api/eventFilter?categoryID=\(categoryIDString)"
+        let urlString = "https://api.yayx.dk/event/eventFilterMain?categoryID=\(categoryIDString)"
         
         do {
             let fetchedEvents = try await performAPICall(from: urlString)

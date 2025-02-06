@@ -95,12 +95,12 @@ struct EventRowViewStyled: View {
                                 .clipped()
                                 .shadow(color: Color.black.opacity(0.5), radius: 1, x: 1, y: 1)
                             
-                                .clipShape(RoundedCorners(radius: 10, corners: [.topLeft, .topRight]))
+                                .clipShape(RoundedCorners5(radius: 10, corners: [.topLeft, .topRight]))
                             
                                 .overlay(
                                     ZStack {
-                                        Color.gray.opacity(0.1)                            .frame(width: 380, height: 40)
-                                            .clipShape(RoundedCorners(radius: 10, corners: [.topLeft, .topRight]))
+                                        Color.gray.opacity(0.2)                            .frame(width: 380, height: 40)
+                                            .clipShape(RoundedCorners5(radius: 10, corners: [.topLeft, .topRight]))
                                            
                                         
                                         
@@ -256,16 +256,17 @@ struct EventRowViewStyled: View {
                 .padding(.vertical, 5)
                 .frame(width: 380, height: 260)
                 //.padding()
-                .background(Color.orange.opacity(0.1))
+                .background(Color(red: 0.99, green: 0.97, blue: 0.88))
                 .cornerRadius(10)
                 .padding(.bottom, 5)
+                
                
                 
                 
                 
             
         }
-            
+            .shadow(radius: 1)
             .buttonStyle(PlainButtonStyle())
             .background(Color(red: 0.99, green: 0.97, blue: 0.88)) 
             //.edgesIgnoringSafeArea(.all)
@@ -279,6 +280,24 @@ struct EventRowViewStyled: View {
 }
 
 }
+
+struct RoundedCorners5: Shape {
+    var radius: CGFloat = 20
+    var corners: UIRectCorner = [.topLeft, .topRight]
+    
+    func path(in rect: CGRect) -> Path {
+        // Debug output
+        
+        let adjustedRadius = min(radius, min(rect.width, rect.height) / 2)
+        let path = UIBezierPath(
+            roundedRect: rect,
+            byRoundingCorners: corners,
+            cornerRadii: CGSize(width: adjustedRadius, height: adjustedRadius)
+        )
+        return Path(path.cgPath)
+    }
+}
+
 private func formatDate(from dateString: String) -> String? {
     let dateFormatter = DateFormatter()
     

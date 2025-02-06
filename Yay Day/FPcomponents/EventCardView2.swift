@@ -29,12 +29,12 @@ struct EventCardView2: View {
                                 .frame(width: 380, height: 170)
                             
                                 .shadow(color: Color.black.opacity(0.5), radius: 1, x: 1, y: 1)
-                                .clipShape(RoundedCorners(radius: 10, corners: [.topLeft, .topRight]))
+                                .clipShape(RoundedCorners7(radius: 10, corners: [.topLeft, .topRight]))
                                 .overlay(
                                     ZStack {
-                                        Color.gray.opacity(0.1)
+                                        Color.gray.opacity(0.2)
                                             .frame(width: 380, height: 40)
-                                            .clipShape(RoundedCorners(radius: 10, corners: [.topLeft, .topRight]))
+                                            .clipShape(RoundedCorners7(radius: 10, corners: [.topLeft, .topRight]))
                                            
                                         
                                         
@@ -163,10 +163,11 @@ struct EventCardView2: View {
                 }
                 .padding(.vertical, 1)
                 .frame(width: 380, height: 260)
-                .background(Color.orange.opacity(0.1))
+                .background(Color(red: 0.99, green: 0.97, blue: 0.88))
                 .cornerRadius(10)
                 .offset(x: 4)
                 .padding(.horizontal, 20)
+                .shadow(radius: 1)
                 
                 LocationManagerWrapper(userLocation: $userLocation)
                     .frame(height: 0)
@@ -180,6 +181,22 @@ struct EventCardView2: View {
 }
 
 
+struct RoundedCorners7: Shape {
+    var radius: CGFloat = 20
+    var corners: UIRectCorner = [.topLeft, .topRight]
+    
+    func path(in rect: CGRect) -> Path {
+        // Debug output
+        
+        let adjustedRadius = min(radius, min(rect.width, rect.height) / 2)
+        let path = UIBezierPath(
+            roundedRect: rect,
+            byRoundingCorners: corners,
+            cornerRadii: CGSize(width: adjustedRadius, height: adjustedRadius)
+        )
+        return Path(path.cgPath)
+    }
+}
 
 
     private func dateString(from date: Date) -> String {

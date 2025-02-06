@@ -54,7 +54,7 @@ class SearchEventViewModel: ObservableObject {
     }
 
     private func fetchAllData() async {
-        let urlString = "https://api.yayx.dk/api/eventFilter"
+        let urlString = "https://api.yayx.dk/event/eventFilterMain"
         do {
             let fetchedEvents = try await performAPICall(from: urlString)
             DispatchQueue.main.async {
@@ -75,7 +75,7 @@ class SearchEventViewModel: ObservableObject {
     }
 
     private func fetchEventsForCategoryID(_ categoryID: Int) async {
-        let urlString = "https://api.yayx.dk/api/eventFilter?categoryID=\(categoryID)"
+        let urlString = "https://api.yayx.dk/event/eventFilterMain?categoryID=\(categoryID)"
         do {
             let fetchedEvents = try await performAPICall(from: urlString)
             DispatchQueue.main.async {
@@ -95,7 +95,7 @@ class SearchEventViewModel: ObservableObject {
             return
         }
 
-        let urlString = "https://api.yayx.dk/api/eventFilter?place=\(encodedPlace)"
+        let urlString = "https://api.yayx.dk/event/eventFilterMain?place=\(encodedPlace)"
         do {
             let fetchedEvents = try await performAPICall(from: urlString)
             DispatchQueue.main.async {

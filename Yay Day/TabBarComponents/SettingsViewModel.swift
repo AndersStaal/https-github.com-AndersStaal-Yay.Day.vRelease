@@ -75,8 +75,23 @@ class TranslationManager: ObservableObject {
         ],
         
         "Ingen_Favoritter": [
-            "en": "No favourites yet.",
-            "da": "Ingen favoritter endnu."
+            "en": "No favourites yet. Click the heart in the top right corner of an event, to save it in Favourites",
+            "da": "Ingen favoritter endnu. Tryk på hjertet oppe i højre hjørne på et event, for at gemme det i Favoritter"
+        ],
+        
+        "Ingen_Favoritter1": [
+            "en": "No Bookings yet. Click the Book Button at the bottom of an event page to book it, and get your overview at the bookings page",
+            "da": "Ingen bookings endnu. Tryk på Book Button nederst på et event, for at booke det, og se et overblik i Bookings"
+        ],
+        
+        "Remove Booking": [
+            "en": "Remove Booking",
+            "da": "Fjern Booking"
+        ],
+        
+        "Book now": [
+            "en": "Book nu",
+            "da": "Book now"
         ],
         
         "See_more": [
@@ -277,8 +292,8 @@ class TranslationManager: ObservableObject {
         ],
         
         "No_match": [
-            "en": "No match, try again",
-            "da": "Intet match, prøv igen"
+            "en": "You can try new filters to get a result, we hope you find your perfect Yay Day",
+            "da": "Du kan ændre i filtrene for et nyt resultat, vi håber du finder din perfekte Yay Day"
         ],
         
         
@@ -315,6 +330,15 @@ class TranslationManager: ObservableObject {
         ],
         
         
+        "GetAnotherEvent": [
+            "en": "Get another event",
+            "da": "Prøv et nyt event"
+        ],
+        
+        "NoEventMatch": [
+            "en": "No match, try again",
+            "da": "Intet match, prøv igen"
+        ],
     ]
 
    

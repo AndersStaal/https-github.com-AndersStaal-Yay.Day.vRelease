@@ -1,0 +1,11 @@
+ Color.clear  // Invisible view to make the tab work
+                .tabItem {
+                    Image(systemName: "questionmark.circle.fill")
+                    Text("Prøv lykken")
+                }
+                .onAppear {
+                    isModalPresented = true
+                }
+                .sheet(isPresented: $isModalPresented) {
+                    RandomEventModalView()
+                }

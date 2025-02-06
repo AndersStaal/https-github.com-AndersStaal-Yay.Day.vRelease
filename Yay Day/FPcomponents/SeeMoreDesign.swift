@@ -12,34 +12,31 @@ import CoreLocation
 
 struct EventListView: View {
     var events: [Event]
-
+    
+   
     var body: some View {
+
+        
         NavigationView {
             ScrollView {
                 VStack(spacing: 0) {
                     if events.isEmpty {
-                        Text("No events found.")
-                            .font(.headline)
-                            .foregroundColor(.gray)
-                            .padding()
-                    } else {
-                        ForEach(events) { event in
-                            EventRowView(event: event)
-                        }
-                        
-                    }
-                }
-                .padding(.vertical, 1)
-                .navigationTitle("Events")
-            }
-           
-
-        }
-        .background(Color(red: 0.99, green: 0.97, blue: 0.88))
-
-    }
-    
-}
+                           Text("No events available")
+                               .foregroundColor(.gray)
+                               .padding()
+                       } else {
+                           ForEach(events) { event in
+                               EventRowView(event: event)
+                           }
+                       }
+                   }
+                                   .padding(.vertical, 1)
+                                   .navigationTitle("Events")
+                               }
+                           }
+                           .background(Color(red: 0.99, green: 0.97, blue: 0.88))
+                       }
+                   }
 
 struct EventRowView: View {
     var event: Event
@@ -54,91 +51,114 @@ struct EventRowView: View {
         
             NavigationLink(destination: EventInfoPage(event: event, userLocation: userLocation)) {
                 VStack(alignment: .center, spacing: 4) {
-                    if let url = URL(string: event.imageUrl) {
-                        AsyncImage(url: url) { image in
-                            image
-                                .resizable()
-                                .scaledToFill()
-                                .frame(width: 380, height: 170)
-                                .clipShape(RoundedCorners(radius: 10, corners: [.topLeft, .topRight]))
-                            
-                                .overlay(
-                                    ZStack {
-                                        Color.gray.opacity(0.1)
-                                            .frame(width: 380, height: 40)
-                                            .clipShape(RoundedCorners(radius: 10, corners: [.topLeft, .topRight]))
-                                           
-                                        
-                                        
-                                        HStack {
-                                            Image(systemName: "calendar")
-                                                .foregroundColor(.white)
-                                                .padding(.top, 2)
-                                                .font(.system(size: 20))
-                                               
-                                            Spacer()
+                    if let url = URL(string: event.imageUrl), !event.imageUrl.isEmpty {
+                        AsyncImage(url: url) { phase in
+                            switch phase {
+                            case .empty:
+                                ProgressView() // Loading spinner
+                                    .scaledToFill()
+                                    .frame(width: 380, height: 170)
+                                    .clipShape(RoundedCorners6(radius: 10, corners: [.topLeft, .topRight]))
+                            case .success(let image):
+                                image
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 380, height: 170)
+                                    .clipped()
+                                
+                                
+                                    .overlay(
+                                        ZStack {
+                                            Color.gray.opacity(0.2)
+                                                .frame(width: 380, height: 40)
+                                                .clipShape(RoundedCorners6(radius: 10, corners: [.topLeft, .topRight]))
+                                                .offset(y: -1)
                                             
-                                            if let formattedDate = formatDate(from: event.startDate) {
-                                                Text(formattedDate)
-                                                    .font(.custom("Helvetica Neue", size: 18))
-                                                    .fontWeight(.bold)
+                                            
+                                            
+                                            HStack {
+                                                Image(systemName: "calendar")
                                                     .foregroundColor(.white)
-                                                    .multilineTextAlignment(.center)
-                                                    .tracking(1)
-                                                
-                                                  
-                                            } else {
-                                                Text("Invalid Date")
-                                                    .font(.subheadline)
-                                                    .foregroundColor(.red)
-                                            }
-                                            Spacer()
-                                            
-                                            
-                                            Button(action: {
-                                                withAnimation {
-                                                    isFavorite.toggle()
-                                                    toggleFavorite(event: event)
-                                                }
-                                            }) {
-                                                
-                                                Image(systemName: isFavorited(event: event) ? "heart.fill" : "heart")
-                                                    .foregroundColor(.white)
-                                                    .fontWeight(.semibold)
-                                                    .animation(.easeInOut, value: isFavorite)
-                                                    .font(.system(size: 20))
-                                                    .cornerRadius(15)
                                                     .padding(.top, 2)
-                                                  
+                                                    .font(.system(size: 20))
+                                                
+                                                Spacer()
+                                                
+                                                if let formattedDate = formatDate(from: event.startDate) {
+                                                    Text(formattedDate)
+                                                        .font(.custom("Helvetica Neue", size: 18))
+                                                        .fontWeight(.bold)
+                                                        .foregroundColor(.white)
+                                                        .multilineTextAlignment(.center)
+                                                        .tracking(1)
+                                                    
+                                                    
+                                                } else {
+                                                    Text("Invalid Date")
+                                                        .font(.subheadline)
+                                                        .foregroundColor(.red)
+                                                }
+                                                Spacer()
+                                                
+                                                
+                                                Button(action: {
+                                                    withAnimation {
+                                                        isFavorite.toggle()
+                                                        toggleFavorite(event: event)
+                                                    }
+                                                }) {
+                                                    
+                                                    Image(systemName: isFavorited(event: event) ? "heart.fill" : "heart")
+                                                        .foregroundColor(.white)
+                                                        .fontWeight(.semibold)
+                                                        .animation(.easeInOut, value: isFavorite)
+                                                        .font(.system(size: 20))
+                                                        .cornerRadius(15)
+                                                        .padding(.top, 2)
+                                                    
+                                                }
                                             }
+                                            .padding(.horizontal, 16)
+                                            .padding(.vertical, 4)
+                                            .padding(.top, 10)
                                         }
-                                        .padding(.horizontal, 16)
-                                        .padding(.vertical, 4)
-                                        .padding(.top, 10)
-                                    }
-                                    ,
-                                    
-                                    alignment: .top
-                                )
-                            
-                        } 
-                    placeholder: {
-                            ProgressView()
+                                        ,
+                                        
+                                        alignment: .top
+                                    )
+                                    .accessibilityLabel("Image for \(event.title)")
+                            case .failure:
+                                
+                                
+                                EmptyView()
+                            }
                         }
                     }
+                                        
                     
-                    Text(event.title)
+                    Text(event.title.isEmpty ? "No Title Available" : event.title)
                         .font(.custom("Helvetica Neue", size: 18))
                         .fontWeight(.semibold)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                         .foregroundColor(.black.opacity(0.9))
-                    
-                    Text(event.translatedDescription.prefix(60))
-
-                        .font(.system(size: 15))
-                        .foregroundColor(.black)
                         .padding(.horizontal, 8)
-                        .offset(y: -2)
-                        .padding(.bottom, 15)
+                        .accessibilityLabel("Event title: \(event.title.isEmpty ? "No Title Available" : event.title)")
+                    
+                    Text(
+                        event.translatedDescription.isEmpty ?
+                            (event.description["dk"] ?? "Event description not available") :
+                            event.translatedDescription
+                    )
+                    .font(.custom("Helvetica Neue", size: 14))
+            
+                    .font(.system(size: 15))
+                    .foregroundColor(.black)
+                    .padding(.horizontal, 8)
+                    .offset(y: -2)
+                    .padding(.bottom, 15)
+                    .accessibilityLabel("Description: \(event.translatedDescription.isEmpty ? (event.description["dk"] ?? "Event description not available") : event.translatedDescription)")
+
+                        
                         
                     
                     
@@ -196,22 +216,38 @@ struct EventRowView: View {
                 }
                 .padding(.vertical, 1)
                 .frame(width: 380, height: 260)
-                .background(Color.orange.opacity(0.1))
+                .background(Color(red: 0.99, green: 0.97, blue: 0.88))
                 .cornerRadius(10)
                 .offset(x: 13)
-                
+               // .shadow(radius: 1)
                 LocationManagerWrapper(userLocation: $userLocation)
                     .frame(height: 0)
             }
             .buttonStyle(PlainButtonStyle())
             
-            
+            .shadow(radius: 1)
         
         
     }
     
 }
 
+struct RoundedCorners6: Shape {
+    var radius: CGFloat = 20
+    var corners: UIRectCorner = [.topLeft, .topRight]
+    
+    func path(in rect: CGRect) -> Path {
+        // Debug output
+        
+        let adjustedRadius = min(radius, min(rect.width, rect.height) / 2)
+        let path = UIBezierPath(
+            roundedRect: rect,
+            byRoundingCorners: corners,
+            cornerRadii: CGSize(width: adjustedRadius, height: adjustedRadius)
+        )
+        return Path(path.cgPath)
+    }
+}
 
     private func dateString(from date: Date) -> String {
         let formatter = DateFormatter()
@@ -219,6 +255,8 @@ struct EventRowView: View {
         formatter.timeStyle = .none
         return formatter.string(from: date)
     }
+
+
 
 
 private func formatDate(from dateString: String) -> String? {

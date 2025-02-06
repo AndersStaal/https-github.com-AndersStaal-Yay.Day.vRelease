@@ -60,36 +60,40 @@ struct CityEventsView: View {
     @ObservedObject var viewModel: EventViewModelCity
     let city: String
 
-    var body: some View {
-            VStack {
-                Text("\(city)")
-                    .font(.custom("Helvetica Neue", size: 18))
-                    .fontWeight(.semibold)
-                    .multilineTextAlignment(.center)
-                    .foregroundColor(Color.black)
-                  
-                
-                ScrollView {
-                    ForEach(viewModel.filteredEvents) { event in
-                        EventCardView2(event: event)
+   
+
+        var body: some View {
+           
+                VStack {
+                    Text("\(city)")
+                        .font(.custom("Helvetica Neue", size: 18))
+                        .fontWeight(.semibold)
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(Color.black)
+                    
+                    ScrollView {
+                        ForEach(viewModel.filteredEvents) { event in
+                            EventCardView2(event: event)
+                        }
+                    }
+                    .overlay(
+                        Rectangle()
+                            .frame(height: 3)
+                            .foregroundColor(Color.black.opacity(0.3)),
+                        alignment: .top
+                    )
+                    
+                    .onAppear {
+                        Task {
+                            await viewModel.fetchAllEvents()
+                        }
                     }
                 }
-                .overlay(
-                    Rectangle()
-                        .frame(height: 3)
-                        .foregroundColor(Color.black.opacity(0.3)),
-                    alignment: .top
-                )
+                .background(Color(red: 0.99, green: 0.97, blue: 0.88))
+
             }
             
-            .background(Color(red: 0.99, green: 0.97, blue: 0.88)) 
-            .onAppear {
-                Task {
-                    await viewModel.fetchAllEvents()
-                }
-            }
-            .background(Color(red: 0.99, green: 0.97, blue: 0.88))
 
-        
-        } 
-    }
+        }
+    
+    

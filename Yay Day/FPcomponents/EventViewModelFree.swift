@@ -21,7 +21,7 @@ class FreeEventsViewModel: ObservableObject {
     }
 
     func fetchFreeEvents() async {
-        let urlString = "https://api.yayx.dk/api/eventFilter?minPrice=0&maxPrice=1"
+        let urlString = "https://api.yayx.dk/event/eventFilterMain?minPrice=0&maxPrice=1"
 
         do {
             let fetchedEvents = try await performAPICall(from: urlString)

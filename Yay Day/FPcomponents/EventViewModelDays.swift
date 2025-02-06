@@ -89,7 +89,7 @@ func formatDate(_ date: Date) -> String {
 }
 
 struct EventRequest {
-    var baseURL: String = "https://api.yayx.dk/api/eventFilter"
+    var baseURL: String = "https://api.yayx.dk/event/eventFilterMain"
     
     func fetchFilteredEvents(completion: @escaping (Result<[Event], Error>) -> Void) {
         let today = Date()

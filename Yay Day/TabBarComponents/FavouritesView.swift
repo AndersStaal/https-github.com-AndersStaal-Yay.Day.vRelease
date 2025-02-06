@@ -38,9 +38,10 @@ struct FavouritesPage: View {
                     Text(translationManager.translate("Ingen_Favoritter"))
                         .font(.headline)
                         .foregroundColor(.gray)
-                        .padding(115)
+                        .padding(110)
                         .offset(y: -100)
                         .padding(.bottom, 300)
+                        .background(backgroundColor)
                 } else {
                     ScrollView {
                         ForEach(favouriteEvents) { event in
@@ -55,12 +56,12 @@ struct FavouritesPage: View {
                                                         .scaledToFill()
                                                         .frame(width: 380, height: 170)
                                                         .shadow(color: Color.black.opacity(0.5), radius: 1, x: 1, y: 1)
-                                                        .clipShape(RoundedCorners(radius: 10, corners: [.topLeft, .topRight]))
+                                                        .clipShape(RoundedCorners4(radius: 10, corners: [.topLeft, .topRight]))
                                                         .overlay(
                                                             ZStack {
                                                                 Color.gray.opacity(0.1)
                                                                     .frame(width: 380, height: 40)
-                                                                    .clipShape(RoundedCorners(radius: 10, corners: [.topLeft, .topRight]))
+                                                                    .clipShape(RoundedCorners4(radius: 10, corners: [.topLeft, .topRight]))
 
                                                                 HStack {
                                                                     Image(systemName: "calendar")
@@ -173,15 +174,17 @@ struct FavouritesPage: View {
                                         }
                                         .padding(.vertical, 1)
                                         .frame(width: 380, height: 260)
-                                        .background(Color.orange.opacity(0.1))
-                                        .cornerRadius(10)
-                                        
+                                        .background(backgroundColor)                              .cornerRadius(10)
+                                        .shadow(radius: 1)
                                     
                                 }
+                                    
                             }
+                            
                         }
                         .padding(.top, 10)
                         .buttonStyle(PlainButtonStyle())
+                        
                         LocationManagerWrapper(userLocation: $userLocation)
                             .frame(height: 0)
                     }
@@ -206,6 +209,23 @@ struct FavouritesPage: View {
     func loadFavourites() {
         let savedEventIDs = UserDefaults.standard.array(forKey: "favourites") as? [String] ?? []
         favouriteEvents = events.filter { savedEventIDs.contains($0.id) }
+    }
+}
+
+struct RoundedCorners4: Shape {
+    var radius: CGFloat = 20
+    var corners: UIRectCorner = [.topLeft, .topRight]
+    
+    func path(in rect: CGRect) -> Path {
+        // Debug output
+        
+        let adjustedRadius = min(radius, min(rect.width, rect.height) / 2)
+        let path = UIBezierPath(
+            roundedRect: rect,
+            byRoundingCorners: corners,
+            cornerRadii: CGSize(width: adjustedRadius, height: adjustedRadius)
+        )
+        return Path(path.cgPath)
     }
 }
 

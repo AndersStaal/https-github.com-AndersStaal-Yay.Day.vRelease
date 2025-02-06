@@ -16,7 +16,7 @@ class EventViewModelCity: ObservableObject {
     let availableCities: [String] = ["Odense", "Nyborg", "Svendborg"]
     
     func fetchAllEvents() async {
-           let urlString = "https://api.yayx.dk/api/eventFilter"
+           let urlString = "https://api.yayx.dk/event/eventFilterMain"
            
            do {
                let fetchedEvents = try await performAPICall(from: urlString)
